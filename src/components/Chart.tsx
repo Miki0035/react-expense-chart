@@ -1,5 +1,4 @@
-import data from "../constants/data.json";
-
+import { data } from "../constants";
 const Chart = () => {
   return (
     <div className="w-full h-full mt-5 flex flex-col  items-center">
@@ -10,8 +9,8 @@ const Chart = () => {
             className="relative w-full flex flex-col items-center h-full"
           >
             <div
-              style={{ height: `${Math.floor(data.amount * 2.5)}px` }}
-              className={` absolute bottom-4 w-[30px] sm:w-[38px]  bg-${data.color} mb-2 rounded-md `}
+              style={{ height: `${Math.floor(data.amount * 2.5)}px`, backgroundColor: `${data.color}` }}
+              className={` absolute bottom-4 w-[30px] sm:w-[38px]  mb-2 rounded-md `}
             ></div>
             <p className="text-xs sm:text-sm text-mediumBrown absolute bottom-1">
               {data.day}
